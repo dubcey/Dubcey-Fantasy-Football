@@ -1,0 +1,620 @@
+.picks {
+     width: 300px;
+}
+
+
+#playerPopupOverlay {
+     background-color: rgba(0, 0, 0, 0.65);
+     background-repeat: repeat;
+     cursor: default;
+     display: none;
+     height: 100%;
+     left: 0px;
+     position: fixed;
+     top: 0px;
+     transition: background 0.9s ease-in 0s;
+     width: 100%;
+     z-index: 99999;
+}
+
+#playerPopupWrapper {
+    background-attachment: fixed !important;
+    background-clip: padding-box !important;
+    background-color: rgba(10, 10, 10, 0.8) !important;
+    background-image: url("../bg_4.jpg");
+    background-position: 75% 25% !important;
+    border: 12px solid rgba(145, 182, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 16px 2px rgba(10, 10, 10, 0.8);
+    display: none;
+    left: 50% !important;
+    overflow: hidden;
+    padding-bottom: 10px;
+    position: fixed !important;
+    top: 45% !important;
+    z-index: 99999;
+}
+
+#playerPopupWrapper li {
+     list-style-image: none;
+     margin: 0px;
+}
+
+#playerPopupLoading {
+     background: url("../bg_4.jpg") no-repeat fixed 75% 25% transparent;
+     position: fixed ! important;
+     text-align: center;
+     z-index: 1;
+}
+
+#playerPopupLoading p {
+     font-size: 11pt;
+     font-weight: bold;
+     position: relative;
+}
+
+#playerPopupLoading span {
+     background: url("../../../../DA_2013/Sticks_10101/DA_AllMadden/loading.gif") no-repeat scroll center top transparent;
+     content: "";
+     height: 15px;
+     left: 0px;
+     position: absolute;
+     top: 40px;
+}
+
+h3#playerPopupName {
+     background: url("") repeat-x scroll center top rgba(50, 50, 50, 0.2);
+     border-radius: 0px;
+     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+     color: #FFFFFF;
+     font-size: 1.1em;
+     font-weight: 400;
+     line-height: 30px ! important;
+     margin-left: 0px;
+     margin-right: 0px;
+     margin-top: 0px;
+     padding: 8px!important;
+     text-align: left ! important;
+     text-indent: 55px;
+     text-transform: uppercase;
+     visibility: visible;
+}
+
+h3#playerPopupName:before {
+     background: url("") no-repeat scroll left center transparent;
+     content: "";
+     height: 45px;
+     left: 6px;
+     position: absolute;
+     top: 0px;
+     width: 45px;
+}
+
+h3#playerPopupName a:hover {
+     color: #AEA3FF;
+}
+
+#playerPopupClose {
+     background-color: rgba(20, 20, 20, 0.1) ! important;
+     border-radius: 5px;
+     border: 4px solid rgba(241, 241, 241, 0.1);
+     box-shadow: 0px 0px 14px 1px rgba(20, 20, 20, 0.6);
+     color: #AEAEAE;
+     cursor: pointer;
+     font-size: 1.4em;
+     font-weight: 400;
+     padding: 0px 9px ! important;
+     position: absolute;
+     right: 14px;
+     top: 2px;
+}
+
+#playerPopupClose:hover {
+     background-color: rgba(50, 50, 50, 0.2) ! important;
+     border-radius: 5px;
+     border: 4px solid rgba(131, 171, 233, 0.6);
+     box-shadow: 0px 0px 14px 1px rgba(20, 20, 20, 0.6);
+     color: #83ABED;
+     cursor: pointer;
+     font-size: 1.4em;
+     font-weight: 400;
+     padding: 0px 9px ! important;
+     position: absolute;
+     right: 14px;
+     top: 2px;
+}
+
+#player_news > h3:nth-child(4) {
+     color: #CCCCCC ! important;
+     font-size: 13pt ! important;
+     font-weight: 900 ! important;
+     line-height: 50px ! important;
+     text-align: center ! important;
+     text-transform: uppercase ! important;
+     visibility: visible ! important;
+}
+
+#playerPopupWrapper ul li {
+     margin-left: 0px;
+}
+
+#playerPopupWrapper ul.content_tabs {
+     background: none repeat scroll 0px 0px #111111;
+     border-bottom: medium none;
+     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+     line-height: 38px;
+     list-style: none outside none;
+     margin-top: 5px ! important;
+     padding: 0px;
+     width: 100%;
+}
+
+#playerPopupWrapper ul.content_tabs li a {
+     background-color: rgba(20, 20, 20, 0.1) ! important;
+     border: 1px solid rgba(51, 51, 51, 0.8) ! important;
+     box-shadow: 0px 0px 14px 1px rgba(20, 20, 20, 0.6);
+     color: #AEAEAE;
+     display: block;
+     float: left;
+     font-size: 1em ! important;
+     font-weight: 400 ! important;
+     margin: 0px 2px 0px 0px;
+     text-align: center;
+     text-decoration: none;
+     text-transform: uppercase;
+     transition: background-color 0.3s ease-in 0s;
+     width: 176px ! important;
+}
+
+#playerPopupWrapper ul.content_tabs {
+     box-shadow: 0px 0px 5px rgba(12, 12, 12, 0.9);
+     font-size: 1.1em;
+     margin-top: 5px;
+     overflow: hidden;
+     padding-bottom: 0px;
+     padding-left: 0px;
+}
+
+#playerPopupWrapper ul.content_tabs {
+     -moz-border-bottom-colors: none;
+     -moz-border-left-colors: none;
+     -moz-border-right-colors: none;
+     -moz-border-top-colors: none;
+     background-color: rgba(23, 23, 23, 0.4);
+     border-color: rgba(145, 182, 255, 0.94);
+     border-image: none;
+     border-style: solid;
+     border-width: 2px 1px;
+     box-shadow: 0px 0px 14px 1px rgba(10, 10, 10, 0.9) inset;
+     float: left;
+     margin-bottom: 4px;
+     margin-left: -1px ! important;
+     padding: 4px 1px ! important;
+     top: 0px;
+}
+
+#playerPopupWrapper ul.content_tabs {
+    
+}
+
+#playerPopupWrapper ul.content_tabs li:hover a {
+     background-color: rgba(26, 26, 26, 0.5) ! important;
+     border-bottom: 2px solid #83ABED ! important;
+     border-left-color: rgba(80, 80, 80, 0.9);
+     border-right-color: rgba(80, 80, 80, 0.9);
+     border-top-color: rgba(80, 80, 80, 0.9);
+     color: #FFFFFF;
+     transition: background-color 0.3s ease-in 0s;
+}
+
+#playerPopupWrapper ul.content_tabs li.ui-state-active a {
+     background-color: rgba(16, 16, 16, 0.6) ! important;
+     border-bottom: 2px solid #83ABED ! important;
+     border-left-color: #4F4F4F;
+     border-right-color: #4F4F4F;
+     border-top-color: #4F4F4F;
+     box-shadow: 0px 0px 14px 1px rgba(8, 8, 8, 0.6);
+     color: #FFFFFF;
+}
+
+ul.content_tabs li.ui-state-active a {
+     color: #FFFFFF ! important;
+}
+
+#playerPopupWrapper ul.content_tabs li a:focus {
+     outline: medium none;
+}
+
+#playerPopupWrapper ul.content_tabs li:last-child a {
+     border-right: 0px none;
+}
+
+#playerPopupWrapper ul.content_tabs li.ui-state-active a {
+     border-bottom: medium none;
+     color: #FFFFFF ! important;
+     font-size: 1em ! important;
+     font-weight: 400 ! important;
+}
+
+ul.content_tabs li.ui-state-active a {
+     color: #AEA3FF;
+}
+
+#playerpopup_tabs ul {
+     margin: 0px ! important;
+     padding: 0px ! important;
+}
+
+#playerpopup_tabs li {
+     display: table-cell;
+     text-align: center;
+     width: 1%;
+}
+
+#player_news > h3:nth-child(4) {
+     visibility: visible ! important;
+}
+
+.playerPopupNewsIcon {
+     margin-bottom: 2px ! important;
+     margin-left: 4px;
+}
+
+.articlepicturetable a[title="news update"], th.articlecaption a[title="news update"], #TabbedPanels8 a[title="news update"], #fantasy_preview a[title="news update"], #fantasy_recap a[title="news update"] {
+     display: none ! important;
+}
+
+.articlepicturetable a[title="recent news"], th.articlecaption a[title="recent news"], #TabbedPanels8 a[title="recent news"], #fantasy_preview a[title="recent news"], #fantasy_recap a[title="recent news"] {
+     display: none ! important;
+}
+
+.articlepicturetable a[title="news"], th.articlecaption a[title="news"], #TabbedPanels8 a[title="news"], #fantasy_preview a[title="news"], #fantasy_recap a[title="news"] {
+     display: none ! important;
+}
+
+.newsContent table.report {
+     background-color: rgba(0, 0, 0, 0.1) ! important;
+     border-radius: 5px;
+     border-spacing: 1px ! important;
+     border: 1px solid rgba(100, 100, 100, 0.2) ! important;
+     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8) inset;
+     float: left;
+     margin-left: 8px ! important;
+     margin-top: 0px ! important;
+     padding: 10px;
+     width: 515px ! important;
+}
+
+.newsContent table.report td {
+     text-align:  ! important;
+}
+
+.newsContent #player_stathistory table tr th {
+     display: table-cell;
+     margin: 0px;
+     padding: 2px;
+     text-align: center;
+     white-space: nowrap;
+     width: 1%;
+}
+
+.newsContent #player_stathistory table tr td {
+     display: table-cell;
+     margin: 0px;
+     padding: 2px;
+     text-align: center;
+     white-space: nowrap;
+     width: 1%;
+}
+
+#player_stats_table td, #player_stats_table th {
+     text-align: center;
+}
+
+.newsContent table.report.biography td {
+     border-spacing: 0px ! important;
+     text-align: left ! important;
+     text-indent: 4px;
+}
+
+.newsContent .biography td.player_photo {
+     text-align: center ! important;
+}
+
+.newsContent .biography td.player_photo img {
+     border: 6px solid rgba(90, 90, 90, 0.2) ! important;
+     box-shadow: 0px 0px 16px 2px #0F0F0F ! important;
+     padding: 6px;
+     vertical-align: middle ! important;
+}
+
+.newsContent .biography th, .newsContent table.report td.headline {
+     text-align: left ! important;
+}
+
+.newsContent .biography th {
+     padding: 0px 5px;
+}
+
+.newsContent .biography td {
+     width: 100%;
+}
+
+.newsContent #player_stats_table th:nth-child(4), .newsContent #player_stats_table th:nth-child(5) {
+     display: none;
+}
+
+.newsContent #player_stats_table tr > td:nth-child(4), .newsContent #player_stats_table tr > td:nth-child(5) {
+     display: none;
+}
+
+#player_stathistory .report, #player_news > table:nth-child(3), #player_stats_table {
+     margin-bottom: 0px ! important;
+}
+
+.newsContent {
+     clear: both;
+     padding-top: 4px;
+}
+
+.newsContent table.report {
+     clear: both;
+}
+
+.newsContent div {
+     overflow: hidden;
+     position: relative;
+}
+
+.newsContent .warning.reportfooter {
+     color: #AEA3FF;
+     display: table-row;
+     text-indent: 5px;
+     text-transform: uppercase;
+}
+
+.newsContent .biography .player_photo img[src="https://www.myfantasyleague.com/player_photos_2010/no_photo_available.jpg"] {
+     box-sizing:border-box;
+     -moz-box-sizing: border-box;
+     background: url("../../../../../../Templates/DA-2011/DA-2014/PlayerNewsPopup/img/no_player_photo.html") no-repeat scroll 0% 0% transparent;
+     border: medium none ! important;
+     display: block;
+     height: 119px;
+     padding-left: 87px;
+     width: 92px;
+}
+
+
+.ps-container .ps-scrollbar-x-rail {
+     background-color: rgba(131, 171, 233, 0.3) ! important;
+     border-radius: 5px;
+     bottom: 3px;
+     box-shadow: 0px 0px 14px 1px rgba(20, 20, 20, 0.6) inset;
+     height: 8px;
+     opacity: 0;
+     position: absolute;
+     transition: background-color 0.2s linear 0s, opacity 0.2s linear 0s;
+}
+
+.ps-container:hover .ps-scrollbar-x-rail, .ps-container.hover .ps-scrollbar-x-rail {
+     opacity: 1;
+}
+
+.ps-container .ps-scrollbar-x-rail:hover, .ps-container .ps-scrollbar-x-rail.hover {
+     opacity: 1;
+}
+
+.ps-container .ps-scrollbar-x-rail.in-scrolling {
+     opacity: 1;
+}
+
+.ps-container .ps-scrollbar-y-rail {
+     background-color: rgba(131, 171, 233, 0.3) ! important;
+     border-radius: 5px;
+     box-shadow: 0px 0px 14px 1px rgba(20, 20, 20, 0.6) inset;
+     max-height: 825px ! important;
+     opacity: 0;
+     position: absolute;
+     right: 3px;
+     transition: background-color 0.2s linear 0s, opacity 0.2s linear 0s;
+     width: 9px;
+}
+
+.ps-container:hover .ps-scrollbar-y-rail, .ps-container.hover .ps-scrollbar-y-rail {
+     opacity: 1;
+}
+
+.ps-container .ps-scrollbar-y-rail:hover, .ps-container .ps-scrollbar-y-rail.hover {
+     opacity: 1;
+}
+
+.ps-container .ps-scrollbar-y-rail.in-scrolling {
+     opacity: 1;
+}
+
+.ps-container .ps-scrollbar-x {
+     background: linear-gradient(to right, #000000 0%, rgba(88, 128, 193, 0.1) 0%, rgba(147, 188, 255, 0.9) 51%, rgba(88, 128, 193, 0.2) 100%) repeat scroll 0px 0px transparent;
+     border-radius: 5px;
+     bottom: 0px;
+     box-shadow: 0px 0px 14px 1px rgba(20, 20, 20, 0.6) inset;
+     height: 8px;
+     position: absolute;
+     transition: background-color 0.2s linear 0s;
+}
+
+.ps-container.ie6 .ps-scrollbar-x {
+     font-size: 0px;
+}
+
+.ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-x-rail.hover .ps-scrollbar-x {
+    
+}
+
+.ps-container .ps-scrollbar-y {
+     background: linear-gradient(to bottom, #000000 0%, rgba(88, 128, 193, 0.1) 0%, rgba(147, 188, 255, 0.9) 51%, rgba(88, 128, 193, 0.2) 100%) repeat scroll 0px 0px transparent;
+     border-radius: 5px;
+     margin: 0px ! important;
+     overflow: hidden;
+     position: absolute;
+     right: 2px;
+     transition: background-color 0.2s linear 0s;
+     width: 6px;
+}
+
+.ps-container.ie6 .ps-scrollbar-y {
+     font-size: 0px;
+}
+
+.ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y, .ps-container .ps-scrollbar-y-rail.hover .ps-scrollbar-y {
+    
+}
+
+.ps-container.ie .ps-scrollbar-x, .ps-container.ie .ps-scrollbar-y {
+     visibility: hidden;
+}
+
+.ps-container.ie:hover .ps-scrollbar-x, .ps-container.ie:hover .ps-scrollbar-y, .ps-container.ie.hover .ps-scrollbar-x, .ps-container.ie.hover .ps-scrollbar-y {
+     visibility: visible;
+}
+
+.newsContent h3 {
+     background-color: transparent;
+}
+
+
+.newsContent .report {
+     margin-bottom: 1em;
+}
+
+.newsContent .eventablerow td {
+     background-color: rgba(0, 0, 0, 0) ! important;
+     border: medium none ! important;
+}
+
+table#playerNewsLinks.report tbody tr.eventablerow {
+     background-color: rgba(0, 0, 0, 0) ! important;
+}
+
+.newsContent .oddtablerow td {
+     background-color: rgba(0, 0, 0, 0) ! important;
+     border: medium none ! important;
+}
+
+table#playerNewsLinks.report tbody tr.oddtablerow {
+     background-color: rgba(0, 0, 0, 0) ! important;
+}
+
+div.newsContent div#player_news.popup_playernews.popup_tabcontent.ui-tabs-panel.ui-widget-content.ui-corner-bottom.ps-container table.report tbody tr.oddtablerow {
+     background-color: rgba(0, 0, 0, 0) ! important;
+}
+
+div.newsContent div#player_news.popup_playernews.popup_tabcontent.ui-tabs-panel.ui-widget-content.ui-corner-bottom.ps-container table.report tbody tr.eventablerow {
+     background-color: rgba(0, 0, 0, 0) ! important;
+}
+
+div.newsContent .report .oddtablerow td {
+     border-bottom: 1px solid #3E3E3E ! important;
+}
+
+div.newsContent .report .eventablerow td {
+     border-bottom: 1px solid #3E3E3E ! important;
+}
+
+div.newsContent div#player_stats.popup_playerstats.popup_tabcontent.ui-tabs-panel.ui-widget-content.ui-corner-bottom.ps-container table#player_stats_table.report tbody tr.eventablerow {
+     background-color: rgba(0, 0, 0, 0) ! important;
+     border: medium none ! important;
+}
+
+div.newsContent div#player_stats.popup_playerstats.popup_tabcontent.ui-tabs-panel.ui-widget-content.ui-corner-bottom.ps-container table#player_stats_table.report tbody tr.oddtablerow {
+     background-color: rgba(0, 0, 0, 0) ! important;
+     border: medium none ! important;
+}
+
+div.newsContent div#player_stathistory.popup_playerstathistory.popup_tabcontent.ui-tabs-panel.ui-widget-content.ui-corner-bottom.ps-container table.report tbody tr.oddtablerow {
+     background-color: rgba(0, 0, 0, 0) ! important;
+     border: medium none ! important;
+}
+
+div.newsContent div#player_stathistory.popup_playerstathistory.popup_tabcontent.ui-tabs-panel.ui-widget-content.ui-corner-bottom.ps-container table.report tbody tr.eventablerow {
+     background-color: rgba(0, 0, 0, 0) ! important;
+     border: medium none ! important;
+}
+
+td.headline a {
+     text-align: left ! important;font-weight: 400;padding:2px}
+
+
+
+
+***STICKS ADD****
+
+#playerPopupLoading,#articlePopupLoading {background: url("../bg_4.jpg") no-repeat fixed 75% 25% transparent;
+     position: fixed ! important;
+     text-align: center;
+     z-index: 1;} 
+#playerPopupLoading p,#articlePopupLoading p {font-size: 11pt;
+     font-weight: bold;
+     position: relative;
+} 
+#playerPopupLoading span,#articlePopupLoading span {background: url("../../../../DA_2013/Sticks_10101/DA_AllMadden/loading.gif") no-repeat scroll center top transparent;
+     content: "";
+     height: 15px;
+     left: 0px;
+     position: absolute;
+     top: 40px;
+} 
+h3#playerPopupName,h3#articlePopupName {background: url("../../../../DA_2013/Sticks_10101/DA_AllMadden/menu-shield3.png") no-repeat scroll left center transparent;
+     border-radius: 0px;
+     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+     color: #FFFFFF;
+     font-size: 1.1em;
+     font-weight: 400;
+     line-height: 30px ! important;
+     margin-left: 0px;
+     margin-right: 0px;
+     margin-top: 0px;
+     padding: 8px!important;
+     text-align: left ! important;
+     text-indent: 55px;
+     text-transform: uppercase;
+     visibility: visible;
+} 
+#playerPopupClose,#articlePopupClose {background-color: rgba(20, 20, 20, 0.1) ! important;
+     border-radius: 5px;
+     border: 4px solid rgba(241, 241, 241, 0.1);
+     box-shadow: 0px 0px 14px 1px rgba(20, 20, 20, 0.6);
+     color: #AEAEAE;
+     cursor: pointer;
+     font-size: 1.4em;
+     font-weight: 400;
+     padding: 0px 9px ! important;
+     position: absolute;
+     right: 14px;
+     top: 2px;
+} 
+#playerPopupClose:hover,#articlePopupClose:hover {background-color: rgba(50, 50, 50, 0.2) ! important;
+     border-radius: 5px;
+     border: 4px solid rgba(131, 171, 233, 0.6);
+     box-shadow: 0px 0px 14px 1px rgba(20, 20, 20, 0.6);
+     color: #83ABED;
+     cursor: pointer;
+     font-size: 1.4em;
+     font-weight: 400;
+     padding: 0px 9px ! important;
+     position: absolute;
+     right: 14px;
+     top: 2px;
+}
+ .newsContent table.report,#articlePopupContent .report {background-color: rgba(0, 0, 0, 0.2) ! important;
+     border-radius: 5px;
+     border-spacing: 1px ! important;
+     border: 1px solid rgba(100, 100, 100, 0.2) ! important;
+     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8) inset;
+     float: left;
+     margin-left: 8px ! important;
+     margin-top: 0px ! important;
+     padding: 10px;
+     width: 515px ! important;
+} 
+#articlePopupContent .report a {} 
+#articlePopupContent .report a:hover {} 
