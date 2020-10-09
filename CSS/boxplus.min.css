@@ -1,0 +1,364 @@
+#boxplus .boxplus-background {     
+     background-image: url("../Grafix/Pattern.png")!important;
+     background-color: rgba(0, 0, 0, 0.6);
+     background-repeat:repeat;
+     cursor: default;
+     height: 100%;
+     left: 0pt;
+     position: fixed;
+     top: 0pt;
+     width: 100%;
+     z-index: 9999;
+}
+
+
+#boxplus .boxplus-dialog {
+    background: none no-repeat scroll center center transparent;
+    border: 0 solid gray;
+    color: black;
+    left: 0;
+    margin: 0;
+    min-height: 200px;
+    min-width: 200px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    z-index: 10000;
+}
+#boxplus .boxplus-dialog div {
+    border: 0 none transparent;
+    margin-left:4px;
+    padding: 1px;
+}
+#boxplus .boxplus-dialog > .boxplus-title {
+    display: none;
+    position: absolute;
+    top: 0;
+}
+#boxplus .boxplus-dialog .boxplus-progress {
+    background: url("../Grafix/loading.png") no-repeat scroll 0 0 transparent;
+    bottom: 0;
+    height: 32px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+}
+#boxplus .boxplus-main {
+    height: 100%;
+}
+#boxplus .boxplus-sideways {
+    float: right;
+    overflow: auto;
+    width: 250px;
+}
+#boxplus .boxplus-sideways > div {
+    margin: 10px;
+}
+#boxplus .boxplus-viewer {
+    direction: ltr;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 600px;
+}
+#boxplus .boxplus-viewer > .boxplus-content {
+    height: 100%;
+    overflow: auto;
+    position: ;
+    width: 100%;
+    margin:-4px; padding:4px;
+}
+#boxplus .boxplus-viewer > img {
+    border: 0 none transparent;
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+#boxplus .boxplus-viewer > video, #boxplus .boxplus-viewer > iframe {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+#boxplus .boxplus-viewer > .boxplus-object {
+    position: absolute;
+    width: 100%;
+}
+#boxplus .boxplus-viewer > .boxplus-prev {
+    background: none no-repeat scroll left center transparent;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 57px;
+}
+#boxplus .boxplus-viewer > .boxplus-prev:hover {
+    background: url("../Grafix/navigation-prev.html") no-repeat scroll 0 center transparent;
+}
+#boxplus .boxplus-viewer > .boxplus-next {
+    background: none no-repeat scroll left center transparent;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 57px;
+}
+#boxplus .boxplus-viewer > .boxplus-next:hover {
+    background: url("../Grafix/navigation-next.html") no-repeat scroll 0 center transparent;
+}
+#boxplus .boxplus-viewer > .boxplus-resizer > * {
+    background: url("") no-repeat scroll 0 0 transparent;
+    height: 20px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 20px;
+}
+#boxplus .boxplus-viewer > .boxplus-resizer > .boxplus-shrink {
+    background-position: 0 0;
+}
+#boxplus .boxplus-viewer > .boxplus-resizer > .boxplus-shrink:hover {
+    background-position: 0 -20px;
+}
+#boxplus .boxplus-viewer > .boxplus-resizer > .boxplus-enlarge {
+    background-position: -20px 0;
+}
+#boxplus .boxplus-viewer > .boxplus-resizer > .boxplus-enlarge:hover {
+    background-position: -20px -20px;
+}
+#boxplus .boxplus-thumbs {
+    display: block;
+    overflow: hidden;
+}
+#boxplus .boxplus-viewer > .boxplus-thumbs {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+#boxplus .boxplus-viewer > .boxplus-thumbs.boxplus-disabled {
+    display: block !important;
+    visibility: hidden !important;
+}
+#boxplus .boxplus-bottom > .boxplus-thumbs, #boxplus .boxplus-sideways > .boxplus-thumbs {
+    height: 80px;
+    position: relative;
+}
+#boxplus .boxplus-thumbs {
+    height: 80px;
+}
+#boxplus .boxplus-thumbs > * {
+    background: none no-repeat scroll 0 center transparent;
+}
+#boxplus .boxplus-thumbs > .boxplus-rewind {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 22px;
+}
+#boxplus .boxplus-thumbs > .boxplus-forward {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 22px;
+}
+#boxplus .boxplus-thumbs > ul {
+    border: 0 none transparent;
+    bottom: 0;
+    display: table-row;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 4px 0;
+    position: absolute;
+    white-space: nowrap;
+}
+#boxplus .boxplus-viewer > .boxplus-thumbs > ul {
+    visibility: hidden;
+}
+#boxplus .boxplus-viewer > .boxplus-thumbs:hover > ul {
+    visibility: visible;
+}
+#boxplus .boxplus-thumbs > ul > li {
+    background: none no-repeat scroll 0 0 transparent !important;
+    border: 0 none transparent;
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+#boxplus .boxplus-thumbs > ul > li > img {
+    border: 1px solid gray;
+    margin: 4px;
+    max-height: 60px;
+    max-width: 60px;
+    padding: 1px;
+    vertical-align: middle;
+}
+#boxplus .boxplus-thumbs > ul > li.boxplus-active > img, #boxplus .boxplus-thumbs > ul > li > img:hover {
+    border: 1px solid red !important;
+}
+#boxplus .boxplus-bottom > .boxplus-caption {
+    margin: 5px 0 0;
+    max-height: 60px;
+    overflow: auto;
+    position: relative;
+}
+#boxplus .boxplus-title {
+    font-weight: bold;
+}
+#boxplus .boxplus-dialog .boxplus-controls {
+    margin: 15px 0 0;
+    position: relative;
+}
+#boxplus .boxplus-controls > div {
+    display: inline-block;
+    height: 25px;
+    margin: 4px;
+    width: 25px;
+}
+#boxplus .boxplus-controls > .boxplus-hidden {
+    display: none;
+}
+#boxplus .boxplus-controls > * {
+    background: none no-repeat scroll 0 0 transparent;
+}
+#boxplus .boxplus-thumbs > .boxplus-rewind, #boxplus .boxplus-controls > .boxplus-prev {
+    background-image: url("../Grafix/button-prev.png");
+}
+#boxplus .boxplus-thumbs > .boxplus-forward, #boxplus .boxplus-controls > .boxplus-next {
+    background-image: url("../Grafix/button-next.png");
+}
+#boxplus .boxplus-controls > .boxplus-close {
+    background-image: url("../Grafix/button-close.png");
+}
+#boxplus .boxplus-controls > .boxplus-start {
+    background-image: url("../Grafix/button-play.png");
+}
+#boxplus .boxplus-controls > .boxplus-stop {
+    background-image: url("../Grafix/button-stop.png");
+}
+#boxplus .boxplus-controls > .boxplus-download {
+    background-image: url("../Grafix/button-save.png");
+}
+#boxplus .boxplus-controls > .boxplus-metadata {
+    background-image: url("../Grafix/button-meta.png");
+}
+#boxplus .boxplus-viewer > .boxplus-prev, #boxplus .boxplus-viewer > .boxplus-next, #boxplus .boxplus-thumbs, #boxplus .boxplus-thumbs > ul {
+    background-image: url("");
+}
+#boxplus div.boxplus-left {
+    text-align: left;
+}
+#boxplus div.boxplus-center {
+    text-align: center;
+}
+#boxplus div.boxplus-right {
+    text-align: right;
+}
+#boxplus .boxplus-hidden {
+    visibility: hidden;
+}
+#boxplus .boxplus-unavailable {
+    display: none !important;
+}
+#boxplus .boxplus-disabled {
+    display: none !important;
+}
+#boxplus > span {
+    display: none;
+}
+
+
+.boxplus-content caption span {
+    color: #C3C3C3;
+    margin-left: 10px;
+    font-size : 20px;padding: 5px;
+    font-family : 'Oswald',sans-serif;
+    text-align: center;
+    text-transform: uppercase;}
+
+div#boxplus th {
+    text-align: left; background-color:transparent;border:none;}
+div#boxplus table.report {background-color:transparent;border:none;}
+div#boxplus tr {background-color:transparent;border:none;}
+div#boxplus td {background-color:transparent;border:none;}
+.boxplus-content .oddtablerow td, .boxplus-content .eventablerow td {border-bottom: 1px solid #454545!important;}
+
+
+
+
+.boxplus-content .oddtablerow td, .boxplus-content .eventablerow td {
+    border-bottom: 1px solid #161616;padding: 0px 0;}
+
+
+.boxplus-content a:link, .boxplus-content a:visited {
+     color: #CCCCCC;
+    font-size: 10.4pt !important;
+    font-weight: 400 !important;
+    text-decoration: none;}
+
+.boxplus-content a:hover {
+    color: #DDDDDD;text-decoration: underline;}
+
+body #boxplus .boxplus-dialog {
+    background-attachment: fixed;
+    background-clip: padding-box;
+    background-color: rgba(10, 10, 10, 0.8) !important;
+    background-image: url("../../../../DA_2014/DA_Glass/Grafix/bg_4.jpg");
+    background-position: 25% 32%;
+    border: 12px solid rgba(145, 182, 255, 0.2);
+    box-shadow: 0 0 16px 2px rgba(10, 10, 10, 0.8);
+    color: #CCCCCC;
+    font-size: 10.4pt !important;
+    font-weight: 400 !important;
+}
+
+
+
+
+.boxplus-content div ol li {
+    background-color: #111111;}
+
+.boxplus-content div ol li:hover {
+    background-color: #666666;}
+
+.boxplus-content div ol li:hover {
+    color: #FFFFFF;}
+.boxplus-content .report {
+    border-collapse: collapse;
+}
+#boxplus .boxplus-viewer > .boxplus-content {
+    overflow: hidden !important;
+}
+.boxplus-content div h2 {
+    background: url("") no-repeat scroll 50% 0 #161616;
+    color: #C3C3C3;
+    margin-top:-3px;
+    padding-left: 15px;
+    font-size : 20px;
+    font-family : 'Oswald',sans-serif;
+    text-align: center;
+    text-transform: uppercase;}
+
+#boxplus .franchiseicon {
+    height: 30px;
+    width: auto;
+}
+
+
+.day_of_week_header th {
+    background-color: rgba(145, 182, 255, 0.1) !important;
+    box-shadow: 0 0 12px 4px rgba(20, 20, 20, 0.3) inset !important;
+    color: #ffffff;
+    padding: 6px !important;}
+
+div#boxplus th {
+    text-indent: 5px;
+    border-right:1px solid rgba(255, 255, 255, 0.08) !important;}
+
+
