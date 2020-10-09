@@ -13,7 +13,7 @@ if (void 0 === useNFLIconInPlayerTable) var useNFLIconInPlayerTable = !0;
 if (void 0 === useMFLIconInPlayerTable) var useMFLIconInPlayerTable = !1;
 if (void 0 === includeLoadingScreen) var includeLoadingScreen = !0;
 if (void 0 === includeCustomPlayers) var includeCustomPlayers = !1;
-if (void 0 === scoreboardUseIcon) var scoreboardUseIcon = !0;
+if (void 0 === scoreboardUseIcon) var scoreboardUseIcon = !1;
 if (void 0 === scoreboardUseLogo) var scoreboardUseLogo = !1;
 if (void 0 === scoreboardUseAbbrev) var scoreboardUseAbbrev = !1;
 if (void 0 === scoreboardIconBase) var scoreboardIconBase = "";
