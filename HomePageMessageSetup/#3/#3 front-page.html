@@ -1,0 +1,104 @@
+<div id="leaguehomepage">
+
+    <div class="container">
+    <div class="wrapper">
+    <div class="leftcolumn">
+        
+        <div class="liquid-round"><div class="top"><span></span></div><div class="center-content">
+    
+        <div align="center">
+        <module name="MY_ICON"/>
+        <div id="login_buttons">
+    <div style="display:none;"><module name="OWNER_ACTIVITY"/><module name="MONTHLY_CALENDAR"/><div id="rules"><module name="MY_OPTIONS"/></div>
+    </div>
+    
+    <a id="ruleslinks" class="qlinks" rel="boxplus_home" href="#rules">Links</a> <a id="calendarlink" class="qlinks" rel="boxplus_home" href="#monthly_calendar">Calendar</a> <a id="acitivtylink" class="qlinks" rel="boxplus_home" href="#owner_activity">Activity</a> <script type="text/javascript">// <![CDATA[
+        $(document).ready(function(){
+            $('.hide1').hide();
+            $('.readmore_jq').click(function(){
+                var t = $(this);
+                t.next().toggle('slow');
+            });
+        });
+        // ]]></script><span id="loginlink" class="readmore_jq">Log In</span><div class="hide1"><module name="WELCOME"/></div></div>
+        </div>
+    
+        <module name="BRIEF_STANDINGS"/>
+        </div><div class="bottom"><span></span></div></div>
+    
+        
+        <div id="scoreboard">
+        <module name="MESSAGE14"/></div>
+    
+            <div class="liquid-round"><div class="top"><span></span></div><div class="center-content"><div class="homepagemodule report" style="font-size:1.12em;font-weight:400;font-size:12pt;margin-bottom:5px;"></div>
+        <module name="MESSAGE16"/>	
+        </div><div class="bottom"><span></span></div></div> 
+    
+            <div class="liquid-round"><div class="top"><span></span></div><div class="center-content">
+        <module name="OWNER_ACTIVITY"/>
+        </div><div class="bottom"><span></span></div></div>	       
+    
+            <div class="liquid-round"><div class="top"><span></span></div><div class="center-content">
+            <module name="DRAFT_STATUS"/> 
+        </div><div class="bottom"><span></span></div></div>
+    
+    </div><!-- close leftcolumn -->
+    </div><!-- close wrapper -->
+    
+    
+    <div class="centercolumn">
+    
+        
+        <div class="liquid-round"><div class="top"><span></span></div><div class="center-content">
+    
+        <div id="time">
+        
+            <module name="CURRENT_SYSTEM_TIME"/> 
+                     
+        </div>
+    
+            <script type="text/javascript">
+    $(document).ready(function () {
+        $.get('http://%HOST%/%YEAR%/options?L=%LEAGUEID%&O=123', function (data) {
+          $(data).find('#monthly_calendar td.today ul').appendTo('#todayscalendar .event td');
+          $("#todayscalendar .event td:empty").text("No Calendar Events Today").addClass("noevent"); 
+        });
+    });
+    </script>
+    <table class="homepagemodule report" id="todayscalendar" align="center" cellspacing="1">
+    <caption><span>Today's Calendar Event</span></caption>
+    <tbody>
+    <tr class="oddtablerow event"><td></td></tr>
+    </tbody>
+    </table>    	
+    
+    
+        </div><div class="bottom"><span></span></div></div>
+    
+        <div class="liquid-round"><div class="top"><span></span></div><div class="center-content">
+        <module name="ARTICLE"/>	
+        </div><div class="bottom"><span></span></div></div>
+    
+        
+        <div class="liquid-round"><div class="top"><span></span></div><div class="center-content">
+        <module name="NEWS_ARTICLES" COUNT="12"/>	
+        </div><div class="bottom"><span></span></div></div>
+    
+            <div class="liquid-round"><div class="top"><span></span></div><div class="center-content">
+        <module name="BBID_SUMMARY"/> 
+        </div><div class="bottom"><span></span></div></div>
+    
+            <div class="liquid-round"><div class="top"><span></span></div><div class="center-content">
+        <module name="TRADES"/>
+        </div><div class="bottom"><span></span></div></div>
+    
+            <div class="liquid-round"><div class="top"><span></span></div><div class="center-content">
+        <module name="TRANSACTIONS"/> 
+        </div><div class="bottom"><span></span></div></div>
+        
+        
+    
+    </div><!-- close centercolumn -->
+    </div><!-- close container -->
+    
+    </div><!-- close leaguehomepage -->

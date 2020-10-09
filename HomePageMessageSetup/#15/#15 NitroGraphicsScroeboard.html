@@ -1,0 +1,57 @@
+<!--  ONLY NEEDED IF YOUR NOT ALREADY LOADING A LOAD JQUERY LIBRARY -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- LOAD SCOREBOARD FORMATTING CSS FILE -->
+<link rel="stylesheet" type="text/css" href="//www.nitrografixx.com/MFL-Scoreboard/skin/Scoreboard_base.css">
+
+<!-- LOAD SCOREBOARD RESPONSIVE CSS FILE REMOVE THIS IF NOT USING RESPONSIVE DESIGNS  -->
+<link rel="stylesheet" type="text/css" href="//www.nitrografixx.com/MFL-Scoreboard/skin/responsive_scoreboard.css">
+
+<!-- LOAD SCOREBOARD JS FILE  -->
+<script src="//www.nitrografixx.com/MFL-Scoreboard/scoreboard.js"></script>
+
+<script>
+var scoreboardName = "";
+var scoreboardTestMode = false; // Set to false when done customizations
+var importScoreboardSkin = true;  // Set to false for custom designed skins and templates
+var includeProjections = true;
+var includeSOS = true;
+var includeStarterTotals = true;
+var includeBenchTotals = true;
+var alwaysDisplayBenchPlayers = false;
+var allPlaySetup = false;
+var hideTiebreakingPlayer = false;
+var useNFLIconInPlayerTable = true;
+var useMFLIconInPlayerTable = false;
+
+var includeCustomPlayers = false;
+var includeLoadingScreen = true;
+
+//MAIN SCOREBOARD AREA (FULL TEAM NAME, TEAM ABBREV, LOGOS OR ICONS) 
+//DEFAULT IS FULL TEAM NAME
+var scoreboardUseIcon = false; // if true will use mfl icon unless user-defined below has been set
+var scoreboardUseLogo = false; // if true will use mfl logo unless user-defined below has been set
+var scoreboardUseAbbrev = false; // if true will use mfl abbrev
+var scoreboardIconBase = ""; // user-defined image (example where images are team0001.png, team0002.png etc. use "http://www.myhost.com/images/team") 
+var scoreboardIconExt = "";  //user-defined extension (from example above use "png")
+var scoreboardRoadImageFlip = false; // horizontal flip of image for road team
+var scoreboardHomeImageFlip = false; // horizontal flip of image for home team
+
+//MINI-SCOREBOARD AREA
+var miniScoreboardUseIcon = false; // if true will use mfl icon unless user-defined below has been set
+var miniScoreboardUseLogo = false; // if true will use mfl logo unless user-defined below has been set
+var miniScoreboardUseAbbrev = false; // if true will use mfl abbrev
+var miniScoreboardIconBase = ""; // user-defined image (example where images are mini0001.gif, mini0002.gif etc. use "http://www.myhost.com/images/mini") 
+var miniScoreboardIconExt = ""; //user-defined extension (from example above use "gif")
+
+//OTHER IMAGES
+var redZoneImage = "//www.nitrografixx.com/MFL-Scoreboard/red_zone.png";
+var hasBallImage = "//www.nitrografixx.com/MFL-Scoreboard/has_ball.png";
+var newScoreImage = "//www.nitrografixx.com/MFL-Scoreboard/new_score.png";
+var recentUpdateImage = "//www.nitrografixx.com/MFL-Scoreboard/new_stats.png";
+var recentNegativeUpdateImage = "//www.nitrografixx.com/MFL-Scoreboard/new_stats_down.png";
+
+var nflLogoPath = "//www.nitrografixx.com/MFL-Popups/NFL-custom-logos/";
+var nflLogoExt = "png";
+
+var scoreboardStylesheetPath = "//www.nitrografixx.com/MFL-Scoreboard/skin/";
+</script> 

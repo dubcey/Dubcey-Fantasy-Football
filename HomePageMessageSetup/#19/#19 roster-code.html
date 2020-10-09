@@ -1,0 +1,767 @@
+<script type="text/javascript">
+    var tradeViewPermission	= true;  //Enable trade toggle button set to false to disable
+    </script>
+    
+    <script language="JavaScript" type="text/javascript" src="http://www.dagrafixdesigns.com/Images/2008/DA_2014/zSticks_25604/DA_AllMadden/Scripts/Nitro-roster.js"></script>
+    
+    
+    <form  method="post" id="proposeTradeForm" >
+    
+    <input type="hidden" id="LEAGUE_ID" name="LEAGUE_ID" value="" />
+    <input type="hidden" id="TRADE_EXPIRES_MONTH" name="TRADE_EXPIRES_MONTH" value="" />
+    <input type="hidden" id="TRADE_EXPIRES_DAY" name="TRADE_EXPIRES_DAY" value="" />
+    <input type="hidden" id="TRADE_EXPIRES_TIME" name="TRADE_EXPIRES_TIME" value="01" />
+    <input type="hidden" id="TRADE_EXPIRES_YEAR" name="TRADE_EXPIRES_YEAR" value="" />
+    <input type="hidden" id="FRANCHISE_ID" name="FRANCHISE_ID" value="" />
+    
+    <div id="nitro-roster" class="homepagemodule report">
+        <div id="rosterTradeLinkDIV" style="display:none">
+            <ul id="rostertabs" class="toggle-roster">
+                <li id="rosterViewTab" class="currenttab" onclick="javascript:rosterViewClickFunction();" title="Roster View"><a href="javascript:void(0)">Roster View</a></li>
+                <li id="tradeViewTab" class="" onclick="javascript:tradeViewClickFunction();" title="Trade View" ><a href="javascript:void(0)">Trades View</a></li>
+            </ul>
+        </div>
+      <table align="center">
+       <tr>
+       <td><div id="roster_column_left"></div></td>
+        <td>
+         <div id="roster_column_middle">
+        <div id="0001_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0001"/>
+        </div>
+        <div id="0002_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0002"/>
+        </div>
+        <div id="0003_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0003"/>
+        </div>
+        <div id="0004_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0004"/>
+        </div>
+        <div id="0005_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0005"/>
+        </div>
+        <div id="0006_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0006"/>
+        </div>
+        <div id="0007_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0007"/>
+        </div>
+        <div id="0008_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0008"/>
+        </div>
+        <div id="0009_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0009"/>
+        </div>
+        <div id="0010_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0010"/>
+        </div>
+        <div id="0011_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0011"/>
+        </div>
+        <div id="0012_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0012"/>
+        </div>
+        <div id="0013_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0013"/>
+        </div>
+        <div id="0014_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0014"/>
+        </div>
+        <div id="0015_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0015"/>
+        </div>
+        <div id="0016_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0016"/>
+        </div>
+        <div id="0017_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0017"/>
+        </div>
+        <div id="0018_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0018"/>
+        </div>
+        <div id="0019_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0019"/>
+        </div>
+        <div id="0020_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0020"/>
+        </div>
+        <div id="0021_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0021"/>
+        </div>
+        <div id="0022_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0022"/>
+        </div>
+        <div id="0023_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0023"/>
+        </div>
+        <div id="0024_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0024"/>
+        </div>
+        <div id="0025_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0025"/>
+        </div>
+        <div id="0026_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0026"/>
+        </div>
+        <div id="0027_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0027"/>
+        </div>
+        <div id="0028_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0028"/>
+        </div>
+        <div id="0029_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0029"/>
+        </div>
+        <div id="0030_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0030"/>
+        </div>
+        <div id="0031_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0031"/>
+        </div>
+        <div id="0032_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0032"/>
+        </div>
+        <div id="0033_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0033"/>
+        </div>
+        <div id="0034_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0034"/>
+        </div>
+        <div id="0035_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0035"/>
+        </div>
+        <div id="0036_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0036"/>
+        </div>
+        <div id="0037_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0037"/>
+        </div>
+        <div id="0038_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0038"/>
+        </div>
+        <div id="0039_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0039"/>
+        </div>
+        <div id="0040_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0040"/>
+        </div>
+        <div id="0041_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0041"/>
+        </div>
+        <div id="0042_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0042"/>
+        </div>
+        <div id="0043_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0043"/>
+        </div>
+        <div id="0044_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0044"/>
+        </div>
+        <div id="0045_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0045"/>
+        </div>
+        <div id="0046_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0046"/>
+        </div>
+        <div id="0047_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0047"/>
+        </div>
+        <div id="0048_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0048"/>
+        </div>
+        <div id="0049_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0049"/>
+        </div>
+        <div id="0050_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0050"/>
+        </div>
+        <div id="0051_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0051"/>
+        </div>
+        <div id="0052_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0052"/>
+        </div>
+        <div id="0053_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0053"/>
+        </div>
+        <div id="0054_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0054"/>
+        </div>
+        <div id="0055_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0055"/>
+        </div>
+        <div id="0056_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0056"/>
+        </div>
+        <div id="0057_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0057"/>
+        </div>
+        <div id="0058_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0058"/>
+        </div>
+        <div id="0059_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0059"/>
+        </div>
+        <div id="0060_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0060"/>
+        </div>
+        <div id="0061_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0061"/>
+        </div>
+        <div id="0062_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0062"/>
+        </div>
+        <div id="0063_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0063"/>
+        </div>
+        <div id="0064_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0064"/>
+        </div>
+        <div id="0065_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0065"/>
+        </div>
+        <div id="0066_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0066"/>
+        </div>
+        <div id="0067_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0067"/>
+        </div>
+        <div id="0068_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0068"/>
+        </div>
+        <div id="0069_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0069"/>
+        </div>
+        <div id="0070_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0070"/>
+        </div>
+        <div id="0071_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0071"/>
+        </div>
+        <div id="0072_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0072"/>
+        </div>
+        <div id="0073_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0073"/>
+        </div>
+        <div id="0074_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0074"/>
+        </div>
+        <div id="0075_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0075"/>
+        </div>
+        <div id="0076_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0076"/>
+        </div>
+        <div id="0077_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0077"/>
+        </div>
+        <div id="0078_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0078"/>
+        </div>
+        <div id="0079_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0079"/>
+        </div>
+        <div id="0080_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0080"/>
+        </div>
+        <div id="0081_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0081"/>
+        </div>
+        <div id="0082_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0082"/>
+        </div>
+        <div id="0083_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0083"/>
+        </div>
+        <div id="0084_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0084"/>
+        </div>
+        <div id="0085_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0085"/>
+        </div>
+        <div id="0086_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0086"/>
+        </div>
+        <div id="0087_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0087"/>
+        </div>
+        <div id="0088_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0088"/>
+        </div>
+        <div id="0089_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0089"/>
+        </div>
+        <div id="0090_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0090"/>
+        </div>
+        <div id="0091_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0091"/>
+        </div>
+        <div id="0092_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0092"/>
+        </div>
+        <div id="0093_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0093"/>
+        </div>
+        <div id="0094_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0094"/>
+        </div>
+        <div id="0095_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0095"/>
+        </div>
+        <div id="0096_m" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0096"/>
+        </div>
+         </div>
+        </td>
+    
+        <td>
+         <div id="roster_column_right">
+        <div id="0001" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0001"/>
+        </div>
+        <div id="0002" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0002"/>
+        </div>
+        <div id="0003" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0003"/>
+        </div>
+        <div id="0004" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0004"/>
+        </div>
+        <div id="0005" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0005"/>
+        </div>
+        <div id="0006" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0006"/>
+        </div>
+        <div id="0007" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0007"/>
+        </div>
+        <div id="0008" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0008"/>
+        </div>
+        <div id="0009" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0009"/>
+        </div>
+        <div id="0010" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0010"/>
+        </div>
+        <div id="0011" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0011"/>
+        </div>
+        <div id="0012" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0012"/>
+        </div>
+        <div id="0013" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0013"/>
+        </div>
+        <div id="0014" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0014"/>
+        </div>
+        <div id="0015" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0015"/>
+        </div>
+        <div id="0016" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0016"/>
+        </div>
+        <div id="0017" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0017"/>
+        </div>
+        <div id="0018" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0018"/>
+        </div>
+        <div id="0019" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0019"/>
+        </div>
+        <div id="0020" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0020"/>
+        </div>
+        <div id="0021" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0021"/>
+        </div>
+        <div id="0022" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0022"/>
+        </div>
+        <div id="0023" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0023"/>
+        </div>
+        <div id="0024" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0024"/>
+        </div>
+        <div id="0025" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0025"/>
+        </div>
+        <div id="0026" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0026"/>
+        </div>
+        <div id="0027" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0027"/>
+        </div>
+        <div id="0028" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0028"/>
+        </div>
+        <div id="0029" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0029"/>
+        </div>
+        <div id="0030" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0030"/>
+        </div>
+        <div id="0031" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0031"/>
+        </div>
+        <div id="0032" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0032"/>
+        </div>
+        <div id="0033" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0033"/>
+        </div>
+        <div id="0034" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0034"/>
+        </div>
+        <div id="0035" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0035"/>
+        </div>
+        <div id="0036" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0036"/>
+        </div>
+        <div id="0037" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0037"/>
+        </div>
+        <div id="0038" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0038"/>
+        </div>
+        <div id="0039" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0039"/>
+        </div>
+        <div id="0040" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0040"/>
+        </div>
+        <div id="0041" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0041"/>
+        </div>
+        <div id="0042" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0042"/>
+        </div>
+        <div id="0043" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0043"/>
+        </div>
+        <div id="0044" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0044"/>
+        </div>
+        <div id="0045" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0045"/>
+        </div>
+        <div id="0046" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0046"/>
+        </div>
+        <div id="0047" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0047"/>
+        </div>
+        <div id="0048" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0048"/>
+        </div>
+        <div id="0049" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0049"/>
+        </div>
+        <div id="0050" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0050"/>
+        </div>
+        <div id="0051" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0051"/>
+        </div>
+        <div id="0052" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0052"/>
+        </div>
+        <div id="0053" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0053"/>
+        </div>
+        <div id="0054" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0054"/>
+        </div>
+        <div id="0055" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0055"/>
+        </div>
+        <div id="0056" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0056"/>
+        </div>
+        <div id="0057" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0057"/>
+        </div>
+        <div id="0058" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0058"/>
+        </div>
+        <div id="0059" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0059"/>
+        </div>
+        <div id="0060" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0060"/>
+        </div>
+        <div id="0061" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0061"/>
+        </div>
+        <div id="0062" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0062"/>
+        </div>
+        <div id="0063" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0063"/>
+        </div>
+        <div id="0064" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0064"/>
+        </div>
+        <div id="0065" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0065"/>
+        </div>
+        <div id="0066" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0066"/>
+        </div>
+        <div id="0067" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0067"/>
+        </div>
+        <div id="0068" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0068"/>
+        </div>
+        <div id="0069" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0069"/>
+        </div>
+        <div id="0070" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0070"/>
+        </div>
+        <div id="0071" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0071"/>
+        </div>
+        <div id="0072" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0072"/>
+        </div>
+        <div id="0073" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0073"/>
+        </div>
+        <div id="0074" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0074"/>
+        </div>
+        <div id="0075" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0075"/>
+        </div>
+        <div id="0076" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0076"/>
+        </div>
+        <div id="0077" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0077"/>
+        </div>
+        <div id="0078" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0078"/>
+        </div>
+        <div id="0079" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0079"/>
+        </div>
+        <div id="0080" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0080"/>
+        </div>
+        <div id="0081" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0081"/>
+        </div>
+        <div id="0082" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0082"/>
+        </div>
+        <div id="0083" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0083"/>
+        </div>
+        <div id="0084" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0084"/>
+        </div>
+        <div id="0085" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0085"/>
+        </div>
+        <div id="0086" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0086"/>
+        </div>
+        <div id="0087" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0087"/>
+        </div>
+        <div id="0088" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0088"/>
+        </div>
+        <div id="0089" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0089"/>
+        </div>
+        <div id="0090" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0090"/>
+        </div>
+        <div id="0091" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0091"/>
+        </div>
+        <div id="0092" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0092"/>
+        </div>
+        <div id="0093" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0093"/>
+        </div>
+        <div id="0094" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0094"/>
+        </div>
+        <div id="0095" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0095"/>
+        </div>
+        <div id="0096" class="teamroster" style="display:none">
+          <module name="ROSTER" FRANCHISE="0096"/>
+        </div>		
+         </div>
+        </td>
+    
+       </tr>
+      </table>
+        <div id="messageBoxDIV"></div>
+    
+        <div id="propseTradeButtonDIV" style="display:none">
+            <p class="form_buttons">
+                <input type="submit" value="Perform Trade" style="display:none" name="Perform" onclick="javascript:performTrade(); return false;" />
+                <input type="submit" value="Propose Trade" name="Propose" onclick="javascript:proposeTrade(); return false;" />
+            </p>
+        </div>
+    
+    
+    </div>
+    </form>
+    
+    
+    
+    
+    <style>
+    #nitro-roster {
+         margin-bottom: 10px;
+         padding: 10px 0px;
+         width: 960px;
+    }
+    
+    #roster_column_middle, #roster_column_right {
+         margin: 0px 0px 0px -5px;
+         padding: 0px;
+         width: 382px;
+    }
+    
+    #nitro-roster table {
+         margin: 0px;
+    }
+    
+    #nitro-roster td {
+         vertical-align: top ! important;
+    }
+    
+    #nitro-roster .report td {
+         text-align: center;
+    }
+    
+    #nitro-roster th.points, #nitro-roster th.week, #nitro-roster th.salary, #nitro-roster th.year, #nitro-roster th.status, #nitro-roster th.drafted {
+         text-align: center;
+         white-space: nowrap;
+    }
+    
+    #nitro-roster th {
+         text-align: left;
+    }
+    
+    #nitro-roster td.player {
+         text-align: left;
+    }
+    
+    #nitro-roster .report {
+         background-clip: padding-box;
+        background-color: rgba(20, 20, 20, 0.5) !important;
+        border: 1px solid rgba(50, 50, 50, 0.9);
+        border-radius: 5px;
+        box-shadow: 0 0 14px 1px rgba(20, 20, 20, 0.9) inset;
+         font-size: 11.4pt;
+         padding: 5px;
+         position: relative;
+         width: 98%;
+    }
+    
+    #nitro-roster .report caption {
+         background: none repeat scroll 0px 0px transparent;
+         border: 1px solid #;
+         height: 42px;
+         padding-top: 4px;
+         text-align: center;
+         text-indent: 0px;}
+    
+    #nitro-roster .report caption span {
+         background: none repeat scroll 0% 0% transparent;
+         margin: 0px;
+         padding: 0px;
+         text-indent: 0px;
+    }
+    
+    #nitro-roster caption .franchiseicon {
+         height: auto;
+         width: 250px;
+    }
+    
+    #roster_column_left {
+         margin-top: 50px;
+    }
+    
+    #roster_column_left .franchiseicon {
+         height: auto;
+         width: 180px;
+    }
+    
+    #messageBoxDIV {
+         margin: 0px auto;
+         width: 50%;
+    }
+    
+    #messageBoxDIV th {
+         text-align: center;
+    }
+    
+    #messageBoxDIV textarea {
+         margin: 0px;
+         padding: 0px;
+         width: 100%;
+    }
+    
+    ul#rostertabs .currenttab {
+         display: none;
+    }
+    
+    ul#rostertabs li {
+        background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #1e5799 1%, #6e99ef 50%, #5c7ab4 51%, #1e5799 100%) repeat scroll 0 0;
+         border-radius: 3px;
+         border: 2px solid #688fdb;
+         box-shadow: 0px 0px 18px #181818;
+         list-style: none outside none;
+         margin-left: 0px;
+         margin-top: 9px;
+         position: absolute;
+         text-align: center;
+         text-shadow: -1px -1px 1px rgba(110, 110, 110, 0.1), 1px 1px 1px rgba(8, 8, 8, 0.7);
+         text-transform: uppercase ! important;
+         width: 100px;
+    }
+    
+    ul#rostertabs li a {
+         color: #eeeeee;
+         font-size: 10.4pt;
+         font-weight: 400;
+         height: 25px;
+         line-height: 25px;
+         padding: 2px 4px;
+         text-decoration: none;
+         text-transform: uppercase ! important;
+    }
+    
+    ul#rostertabs li:hover {
+        background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #1e5799 1%, #91b6ff 50%, #5c7ab4 51%, #1e5799 100%) repeat scroll 0 0;
+         
+    }
+    
+    table#roster.homepagemodule.report > tbody > tr.eventablerow {
+         background-color: #;
+         border: 1px solid #141414;
+    }
+    
+    
+    </style> 
+    

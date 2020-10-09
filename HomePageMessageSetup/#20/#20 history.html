@@ -1,0 +1,268 @@
+<!-- Start Home Page Message 20 -->
+<!-----  LOAD MFLHISTORY SPRYTABS JS FILE 
+         IF YOU ALREADY HAVE A VERSION OF SPRYTABS LOADING NO NEED FOR THIS ------>
+         <script src="https://www.dagrafixdesigns.com/Images/2008/DA_2013/DA_Black/Scripts/SpryTabbedPanels.js" type="text/javascript"></script>
+         <!--  LINK MFL HISTORY CSS  -->
+         <link rel="stylesheet" type="text/css" href="https://dagrafixdesigns.com/Images/2008/DA_2016/zCorey_18919/history.css">
+         <style type="text/css">
+         /* MFL HISTORY SPRYTABS */ 
+         table#mflhistorytabs .TabbedPanelsTab { cursor:pointer;position:relative;text-align:center;text-transform:uppercase;height:34px;line-height:34px; }
+         table#mflhistorytabs ul.TabbedPanelsTabGroup  { width:100%;margin-bottom:25px;padding:0;}
+         table#mflhistorytabs .TabbedPanelsTabGroup li { display: table-cell;width:1%; white-space:nowrap;}
+         table#mflhistorytabs {width:100%!important;} 
+         /***  ADMIN LINK  ***/
+         #admin {float:right;height:0px}
+         #admin a{text-decoration:none;}
+         #admin > a:hover{}
+         /* ADD TEXT TO FRANCHISE COLUMN FOR STANDINGS CAREER */
+         table.homepagemodule.standingstable.careerstandingstable>tbody>tr.headerrow>th.blankhead:after,div#standings.leaguehistorymodule table.homepagemodule.standingstable tbody tr.headerrow th.divname:after
+         {content:"DIVISION";text-align:center;}
+         /***  GAME CENTER  ***/
+         .gamecentertable tbody {vertical-align:top!important;}
+         .gamecentertable .gamematchup,.gamecentertable .gamematchup .prevmatchups {border:none!important;padding:0!important;border-radius:0;box-shadow:none!important;}
+         #gamecenter_seasonmenu,#gamecenter_weekmenu {text-transform:uppercase;font-size:11pt;margin-left:10px;}
+         #gamecenter_seasonmenu a,#gamecenter_weekmenu a{font-size:11pt;text-decoration:none;}
+         TABLE.homepagemodule.gamematchup.report {width:100%}
+         .gamecentertable th.scorehead {width:80px;}
+         .gamecentertable td.gamescore {width:80px;text-align:center}
+         .gamecentertable .winnermark {float:right;clear:both;color:red;margin-right:5px;}
+         .gamecentertable .prevmatchups td {text-align:center;}
+         /***  ADJUST TABLES AND SELECT BOXES  ***/
+         #mflhistory .report {border-spacing:1px;}
+         #mflhistory select {margin-bottom:10px;margin-left:5px;}
+         #mflhistory #teamselect {margin-left:5px;text-transform:uppercase;}
+         #mfl-singlegame .column-left,#mfl-singleseason .column-left,#mfl-career .column-left,#mfl-postseason .column-left,#mfl-milestones .column-left,#mfl-teampages .column-left
+         {float:left;width:465px!important;vertical-align:top!important;clear:left;}
+         #mfl-singlegame .column-right,#mfl-singleseason .column-right,#mfl-career .column-right,#mfl-postseason .column-right,#mfl-milestones .column-right,#mfl-teampages .column-right   
+         {width:465px!important;vertical-align:top!important;display:inline-block;margin-left:14px!important;}
+         .newalign div th {display:table-cell;width:10%!important;text-align:center;white-space:nowrap;}
+         /***  STANDINGS - season link bar  ***/
+         #standings_seasonmenu {text-transform:uppercase;font-size:11pt;margin-left:10px;}
+         #standings_seasonmenu a {font-size:11pt;text-decoration:none;}
+         /**************************************************************************************************************************************** 
+         IF YOU WANT YOUR TABLES TO BE SIDE BY SIDE INSTEAD OF EACH ONE FULL LENGTH ADD THIS AND SET THE WIDTH OF THE TABLE TO ADJUST TO YOUR SITE
+         #mfl-singlegame .column-left,#mfl-singleseason .column-left,#mfl-career .column-left,#mfl-postseason .column-left,#mfl-milestones .column-left,#mfl-teampages .column-left
+         {float:left;width:465px!important;vertical-align:top!important;clear:left;}
+         #mfl-singlegame .column-right,#mfl-singleseason .column-right,#mfl-career .column-right,#mfl-postseason .column-right,#mfl-milestones .column-right,#mfl-teampages .column-right   
+         {width:465px!important;vertical-align:top!important;display:inline-block;margin-left:14px!important;}
+         .newalign div td{text-align:center;}
+         YOU WILL ALSO NEED TO REMOVE THIS LINE OF CSS FROM THE ORIGINAL STYLESHEET ABOVE
+         .newalign div td{display:table-cell;width:10%!important;white-space:nowrap;text-align:center;}
+         ******************************************************************************************************************************************/
+         </style>
+         <script type="text/javascript">
+             //CHANGE HISTORY ID TO MATCH YOUR MFL HISTORY URL
+             var mflHistoryId = 540;
+             //SET BASE URL FOR MFLHISTORY - do not touch
+             function getHistoryUrl(recordType) {
+                 var url = 'https://www.mflhistory.com/leaguehistory.php?id=' + mflHistoryId;
+                 if (recordType !== undefined)
+                     url += '&recordtype=' + recordType;
+                 return url;
+             }
+             $(document).ready(function () {
+                 //GET ADMIN LINK FROM MFL HISTORY
+                 $.get(getHistoryUrl(), function (data) {
+                     var adminLink = $(data).find('td.leaguehistorywelcome a').attr('href');
+                     $('#admin').append('<a href="https://www.mflhistory.com/' + adminLink + '" target="blank">Admin Menu</a>');
+                 });
+                 $.get(getHistoryUrl('game'), function (data) {
+                     $(data).find('.leaguehistorymodule').appendTo('#mfl-singlegame');
+                     styleResult();
+                 });
+                 $.get(getHistoryUrl('season'), function (data) {
+                     $(data).find('.leaguehistorymodule ').appendTo('#mfl-singleseason');
+                     styleResult();
+                 });
+                 $.get(getHistoryUrl('career'), function (data) {
+                     $(data).find('.leaguehistorymodule').appendTo('#mfl-career');
+                     styleResult();
+                 });
+                 $.get(getHistoryUrl('playoffs'), function (data) {
+                     $(data).find('.leaguehistorymodule').appendTo('#mfl-postseason');
+                     styleResult();
+                 });
+                 $.get(getHistoryUrl('milestone'), function (data) {
+                     $(data).find('.leaguehistorymodule').appendTo('#mfl-milestones');
+                     styleResult();
+                 });
+                 $.get(getHistoryUrl('player'), function (data) {
+                     $(data).find('input , select , .leaguehistorymodule').appendTo('#mfl-players');
+                     $('#mfl-players input[name=SubmitRecord]').hide();
+                     bindPlayerMenu();
+                     styleResult();
+                 });
+                 $.get(getHistoryUrl('standings'), function (data) {
+                     $(data).find('#standings_seasonmenu, .leaguehistorymodule').appendTo('#mfl-standings');
+                     bindStandingsLinks();
+                     styleResult();
+                 });
+                 $.get(getHistoryUrl('team'), function (data) {
+                     $(data).find('form , .leaguehistorymodule').appendTo('#mfl-teampages');
+                     $('#mfl-teampages input[name=TeamSubmit]').hide();
+                     styleResult();
+                     $('#mfl-teampages select[name=team]').change(function () {
+                         $.ajax({
+                             type: 'GET',
+                             url: 'https://www.mflhistory.com/leaguehistory.php?id=' + mflHistoryId + '&recordtype=team&team=' + $(this).val(),
+                             data: {
+                                 SubmitRecord: 'Go'
+                             }
+                         }).done(function (data) {
+                             var teamData = $(data).find('.leaguehistorymodule');
+                             $('#mfl-teampages .leaguehistorymodule').remove();
+                             $('#mfl-teampages').append(teamData);
+                             styleResult();
+                         });
+                     });
+                 });
+                 $.get(getHistoryUrl('gamecenter'), function (data) {
+                     $(data).find('#gamecenter_seasonmenu, #gamecenter_weekmenu , .leaguehistorymodule').appendTo('#mfl-gamecenter');               
+                     bindYearMenu();
+                     bindWeekMenu();
+                     styleResult();
+                 });
+             });
+             function styleResult() {
+                 $('.leaguehistorymodule .homepagemodule').addClass('report');
+                 $('.leaguehistorymodule .homepagemodule caption').each(function () {
+                     $(this).html('<span>' + $(this).text() + '</span>');
+                     $('.newalign .leaguehistorymodule:nth-child(odd)').addClass("column-left");
+                     $('.newalign .leaguehistorymodule:nth-child(even)').addClass("column-right");
+                 });
+             }
+             function bindPlayerMenu() {
+                 $('#mfl-players select[name=recordid]').change(function () {
+                     var recordId = $(this).val();
+                     $.ajax({
+                         type: 'POST',
+                         url: 'https://www.mflhistory.com/leaguehistory.php?id=' + mflHistoryId,
+                         data: {
+                             recordid: recordId,
+                             recordtype: 'player',
+                             SubmitRecord: 'Go'
+                         }
+                     }).done(function (data) {
+                         var playerData = $(data).find('select, .leaguehistorymodule');
+                         $('#mfl-players select, #mfl-players .leaguehistorymodule').remove();
+                         $('#mfl-players').append(playerData);
+                         bindPlayerMenu();
+                         bindPositionMenu();
+                         styleResult();
+                     });
+                 });
+             }
+             function bindPositionMenu() {
+                 $('#mfl-players select[name=positionid]').change(function () {
+                     var recordId = $('#mfl-players select[name=recordid]').val();
+                     var positionId = $(this).val();
+                     $.ajax({
+                         type: 'POST',
+                         url: 'https://www.mflhistory.com/leaguehistory.php?id=' + mflHistoryId,
+                         data: {
+                             positionid: positionId,
+                             recordid: recordId,
+                             recordtype: 'player',
+                             SubmitRecord: 'Go'
+                         }
+                     }).done(function (data) {
+                         var positionData = $(data).find('#positionid, .leaguehistorymodule');
+                         $('#mfl-players #positionid, #mfl-players .leaguehistorymodule').remove();
+                         $('#mfl-players').append(positionData);
+                         bindPositionMenu();
+                         styleResult();
+                     });
+                 });
+             }
+             function bindStandingsLinks() {
+                 $('#mfl-standings a').unbind().click(function () {
+                     var link = $(this).attr('href');
+                     $.ajax({
+                         type: 'GET',
+                         url: 'https://www.mflhistory.com/' + link
+                     }).done(function (data) {
+                         var standingsData = $(data).find('#standings_seasonmenu, .leaguehistorymodule');
+                         $('#mfl-standings #standings_seasonmenu, #mfl-standings .leaguehistorymodule').remove();
+                         $('#mfl-standings').append(standingsData);
+                         bindStandingsLinks();
+                         styleResult();
+                     });
+                     return false;
+                 });
+             }
+             function bindYearMenu() {
+                 $('#mfl-gamecenter #gamecenter_seasonmenu a').unbind().click(function () {
+                     var link = $(this).attr('href');
+                     $.ajax({
+                         type: 'GET',
+                         url: 'https://www.mflhistory.com/' + link
+                     }).done(function (data) {
+                         var gamecenterData = $(data).find('#gamecenter_seasonmenu, #gamecenter_weekmenu, .leaguehistorymodule');
+                         $('#mfl-gamecenter #gamecenter_seasonmenu, #mfl-gamecenter #gamecenter_weekmenu, #mfl-gamecenter .leaguehistorymodule').remove();
+                         $('#mfl-gamecenter').append(gamecenterData);
+                         bindYearMenu();
+                         bindWeekMenu();
+                         styleResult();
+                     });
+                     return false;
+                 });
+             }
+             function bindWeekMenu() {
+                 $('#mfl-gamecenter #gamecenter_weekmenu a').unbind().click(function () {
+                     var link = $(this).attr('href');
+                     $.ajax({
+                         type: 'GET',
+                         url: 'https://www.mflhistory.com/' + link
+                     }).done(function (data) {
+                         var gamecenterData = $(data).find('#gamecenter_weekmenu, .leaguehistorymodule');
+                         $('#mfl-gamecenter #gamecenter_weekmenu, #mfl-gamecenter .leaguehistorymodule').remove();
+                         $('#mfl-gamecenter').append(gamecenterData);
+                         bindWeekMenu();
+                         styleResult();
+                     });
+                     return false;
+                 });
+             }
+         </script>
+         <div id="mflhistory">
+          <div id="admin"></div>
+           <table id="mflhistorytabs"><caption><span>MFL HISTORY</span></caption>
+            <tr>
+             <td>
+              <div id="TabbedPanels20" class="TabbedPanels">
+               <ul class="TabbedPanelsTabGroup">
+                <li class="TabbedPanelsTab" tabindex="0">Single Game</li>
+                <li class="TabbedPanelsTab" tabindex="0">Single Season</li>
+                <li class="TabbedPanelsTab" tabindex="0">Career</li>
+                <li class="TabbedPanelsTab" tabindex="0">PostSeason</li>
+                <li class="TabbedPanelsTab" tabindex="0">Milestones</li>
+                <li class="TabbedPanelsTab" tabindex="0">Players</li>
+                <li class="TabbedPanelsTab" tabindex="0">Standings</li>
+                <li class="TabbedPanelsTab" tabindex="0">Team Pages</li>
+                <li class="TabbedPanelsTab" tabindex="0">Game Center</li>
+              </ul>
+             <div class="TabbedPanelsContentGroup">
+              <div class="TabbedPanelsContent newalign"><div id="mfl-singlegame"></div></div>
+              <div class="TabbedPanelsContent newalign"><div id="mfl-singleseason"></div></div>
+              <div class="TabbedPanelsContent newalign"><div id="mfl-career"></div></div>
+              <div class="TabbedPanelsContent newalign"><div id="mfl-postseason"></div></div>
+              <div class="TabbedPanelsContent newalign"><div id="mfl-milestones"></div></div>
+              <div class="TabbedPanelsContent newalign"><div id="mfl-players"></div></div>
+              <div class="TabbedPanelsContent newalign"><div id="mfl-standings"></div></div>
+              <div class="TabbedPanelsContent newalign"><div id="mfl-teampages"></div></div>
+              <div class="TabbedPanelsContent"><div id="mfl-gamecenter"></div></div>
+             </div>
+             </div>
+         <script type="text/javascript">
+         <!--
+         var TabbedPanels20 = new Spry.Widget.TabbedPanels("TabbedPanels20");
+         //-->
+         </script>
+             </td>
+            </tr>
+           </table>
+         </div>
+         <!-- End Home Page Message 20 -->
+         </div>
+         </div>
+         </div>
